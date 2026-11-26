@@ -1,15 +1,9 @@
 """Locust load test for the maize API.
 
-Setup (once):
+we setup (once):
     pip install locust
-    put 10-20 leaf images in locust/sample_images/   (any class, .jpg/.png)
+    have 20 leaf images in locust/sample_images/
 
-Run with the web page (http://localhost:8089):
-    locust -f locust/locustfile.py --host http://localhost:8000
-
-Run without a browser and save the numbers as CSV (good for the README):
-    locust -f locust/locustfile.py --host http://localhost:8000 --headless -u 50 -r 5 -t 2m --csv locust/results/1_container
-      -u = number of simulated users, -r = users started per second, -t = run time
 """
 import random
 from pathlib import Path
