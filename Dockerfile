@@ -16,7 +16,6 @@ USER appuser
 
 EXPOSE 8000
 
-# TensorFlow is slow to load, so give the API time before it counts as unhealthy
 HEALTHCHECK --interval=30s --timeout=5s --start-period=120s \
   CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
 
