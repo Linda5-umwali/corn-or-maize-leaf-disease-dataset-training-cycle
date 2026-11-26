@@ -1,6 +1,3 @@
-# Runs: nginx (load balancer, port 80) -> N copies of the API, plus the Streamlit UI (port 8501).
-#   docker compose up -d --build                 start with 1 API container
-#   docker compose up -d --scale api=3           run 3 API containers
 services:
   api:
     build: .
