@@ -1,6 +1,6 @@
 # Maize Leaf Disease Classification: End-to-End ML Pipeline
 
-> **Video demo:** [YouTube link](https://studio.youtube.com/video/PuskKr0AMxI/edit)
+> **Video demo:** [YouTube link](https://youtu.be/Dg-b0FA95Xk)
 > **Web Application:** [app link](https://corn-or-maize-leaf-disease-dataset-training-cycle-jv8a9qdcxwqv.streamlit.app/)
 > **Live API URL:** [API URL](https://corn-or-maize-leaf-disease-api.onrender.com/docs)
 > **GitHub repo:** [github repo link](https://github.com/Linda5-umwali/corn-or-maize-leaf-disease-dataset-training-cycle.git)
@@ -161,35 +161,25 @@ docker compose up --build
 
 ## 5. Deployment
 
-- **Platform:** [ AWS EC2]
-- **Live URL:** [https://REPLACE_MEeee](https://REPLACE_ME)
-- **How it is deployed:** [one or two lines, e.g. Docker image built from the Dockerfile and deployed as a web service]
+- **Platform:** [ Streamlit]
+- **Live URL:** [App link](https://corn-or-maize-leaf-disease-dataset-training-cycle-jv8a9qdcxwqv.streamlit.app/)
+- **How it is deployed:** UI on steamlit and API on render, connected through app.py
 
 ---
 
 ## 6. Flood Request Simulation (Locust)
 
 **Setup:** [Locust version] sending `POST /predict` with a sample leaf image.
-**Test settings:** [e.g. 100 users, spawn rate 10 per second, run time 2 minutes]
 **Run command:**
 ```bash
 locust -f locust/locustfile.py --host http://[URL]
 ```
 
 ### Results by number of Docker containers
-> Fill in from the Locust report for each run. Use the same user count and duration each time so the comparison is fair.
+Find full results in locust/results in this repo
 
-| Containers | Users | Requests/sec | Median latency (ms) | 95th percentile (ms) | Failures (%) |
-|---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-
-**Screenshots:** add your Locust charts under `locust/results/` and link them here.
+**Screenshots:**
 `![1 container](locust/results/1_container.png)`
-
-**Observations:** [Two or three sentences: how latency and throughput changed as you added containers, and where the limit was.]
-
 ---
 
 ## 7. Notebook
