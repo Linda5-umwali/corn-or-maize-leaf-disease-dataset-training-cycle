@@ -10,7 +10,7 @@ import pandas as pd
 import requests
 import streamlit as st
 
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000").rstrip("/")
+API_URL = API_URL = "https://YOUR-ACTUAL-RENDER-URL.onrender.com"
 STATS_PATH = Path(__file__).parent / "dataset_stats.json"
 
 st.set_page_config(page_title="Maize Leaf Disease", page_icon="🌽", layout="wide")
