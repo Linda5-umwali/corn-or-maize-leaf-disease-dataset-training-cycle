@@ -1,6 +1,5 @@
-"""Streamlit UI. It only talks to the FastAPI service (it never loads the model itself).
+"""Streamlit UI. It talks to the FastAPI service.
 Run:  streamlit run ui/app.py
-Point it at a different API with the API_URL environment variable.
 """
 import json
 import os
@@ -44,7 +43,7 @@ st.sidebar.title("🌽 Maize Leaf Disease")
 page = st.sidebar.radio("Go to", ["Dashboard", "Predict", "Insights", "Upload & Retrain"])
 st.sidebar.caption(f"API: {API_URL}")
 
-# ---------------------------------------------------------------- Dashboard
+#  Dashboard
 if page == "Dashboard":
     st.title("Model dashboard")
     health = call_api("GET", "/health")
@@ -69,7 +68,7 @@ if page == "Dashboard":
             st.caption(f"Finished at {last['time']}")
     st.button("Refresh")
 
-# ------------------------------------------------------------------ Predict
+#  Predict
 elif page == "Predict":
     st.title("Predict one leaf image")
     file = st.file_uploader("Upload a maize leaf photo", type=["jpg", "jpeg", "png"])
@@ -84,7 +83,7 @@ elif page == "Predict":
                 probs = pd.Series(res["probabilities"], name="probability")
                 st.bar_chart(probs)
 
-# ----------------------------------------------------------------- Insights
+#  Insights
 elif page == "Insights":
     st.title("What the data tells us")
     if not STATS_PATH.exists():
@@ -112,7 +111,7 @@ elif page == "Insights":
 
     st.dataframe(stats.round(1))
 
-# ---------------------------------------------------------- Upload & Retrain
+#  Upload & Retrain
 else:
     st.title("Upload new data and retrain")
     health = call_api("GET", "/health")
