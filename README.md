@@ -36,7 +36,7 @@ This project builds a complete machine learning pipeline that classifies **maize
 
 | Metric | Value |
 |---|---|
-| Accuracy | 0.9209 |
+| Accuracy | 0.917 |
 | Macro precision | 0.898 |
 | Macro recall | 0.916 |
 | Macro F1 | 0.899 |
@@ -91,7 +91,8 @@ Project_name/
 │   └── locustfile.py
 ├── data/
 │   ├── train/
-│   └── test/
+│   ├──test/
+│   └── raw/
 ├── models/
 │   └── maize_model.h5
 ├── Dockerfile
@@ -159,7 +160,7 @@ docker compose up --build
 
 ## 5. Deployment
 
-- **Platform:** [Render / Railway / AWS EC2 / other]
+- **Platform:** [ AWS EC2]
 - **Live URL:** [https://REPLACE_MEeee](https://REPLACE_ME)
 - **How it is deployed:** [one or two lines, e.g. Docker image built from the Dockerfile and deployed as a web service]
 
