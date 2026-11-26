@@ -1,0 +1,11 @@
+venv/
+.git/
+__pycache__/
+*.pyc
+data/raw/
+data/new/
+data/retrain_tmp/
+models/maize_model_prev.h5
+notebook/
+locust/results/
+*.zip
