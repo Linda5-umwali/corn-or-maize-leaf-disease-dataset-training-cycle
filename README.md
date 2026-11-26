@@ -1,7 +1,7 @@
 # Maize Leaf Disease Classification: End-to-End ML Pipeline
 
 > **Video demo:** [YouTube link](https://studio.youtube.com/video/PuskKr0AMxI/edit)
-> **Live app / API URL:** [API URL](https://YOUR-ACTUAL-RENDER-URL.onrender.com/docs)
+> **Live API URL:** [API URL](https://YOUR-ACTUAL-RENDER-URL.onrender.com)
 > **GitHub repo:** [github repo link](https://github.com/Linda5-umwali/corn-or-maize-leaf-disease-dataset-training-cycle.git)
 
 ---
